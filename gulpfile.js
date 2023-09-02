@@ -4,7 +4,6 @@ const {
   src, dest, watch, series,
 } = require('gulp');
 
-
 // JS
 const babel = require('gulp-babel');
 
@@ -17,6 +16,10 @@ const autoprefixer = require('gulp-autoprefixer');
 // CSS MINIFIER
 const cleanCSS = require('gulp-clean-css');
 
+
+
+
+
 // SASS COMPILER // CSS MINIFIER // AUTOPREFIXER
 function buildCSS() {
   return src('./build/scss/*.scss')
@@ -26,6 +29,7 @@ function buildCSS() {
     .pipe(dest('./dist/css'));
 }
 
+// JAVASCRIPT
 function javascript() {
   return src('./build/js/**/*.js')
     .pipe(babel({
@@ -34,6 +38,7 @@ function javascript() {
     .pipe(dest('./dist/js'));
 }
 
+// IMAGES
 function images() {
   return src('./build/assets/images/*')
     .pipe(dest('./dist/assets/images'));
@@ -46,11 +51,18 @@ function watchCSS() {
   watch('./build/**/*.js', javascript);
 }
 
+
+
+
 // exports.buildCSS = series(buildCSS);
 // exports.javascript = series(javascript);
 // exports.watchCSS = series(watchCSS);
 // exports.images = series(images);
 exports.default = series(buildCSS, javascript, images, watchCSS);
+
+
+
+
 
 
 
