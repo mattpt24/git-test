@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+}
+
+
+// DEFAULTS
+@import "./defaults/variables";
+
+
+// SECTIONS
+@import "./sections/landing";
