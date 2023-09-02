@@ -5,7 +5,11 @@
 }
 
 h1 {
-  color: red;
+  color: blue;
+}
+
+img {
+  width: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */
