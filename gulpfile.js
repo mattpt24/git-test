@@ -54,10 +54,10 @@ function watchCSS() {
 
 
 
-// exports.buildCSS = series(buildCSS);
-// exports.javascript = series(javascript);
-// exports.watchCSS = series(watchCSS);
-// exports.images = series(images);
+exports.buildCSS = series(buildCSS);
+exports.javascript = series(javascript);
+exports.watchCSS = series(watchCSS);
+exports.images = series(images);
 exports.default = series(buildCSS, javascript, images, watchCSS);
 
 
