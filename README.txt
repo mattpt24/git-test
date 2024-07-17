@@ -12,8 +12,11 @@ git checkout "branch-name"                   - Goes to that branch
 git checkout -b "branch-name"                - Creates new branch and automatically places you there
 git branch                                   - Displays all branches *green one is one you're on
 git branch -D "name of branch"               - Destroys branch (cant be on it when run)
+git stash                                    - Stash changes for later allows you to not have to commit
 
 
+If reverting back to old commit HEAD will detach (Meaning no longer on a branch and instead on a specific commit)
+TO FIX - Create a branch new branch and begin working from this new branch going forward.
 
 
 ***
